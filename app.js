@@ -11,10 +11,20 @@ var flash = require('connect-flash');
 var validator = require('express-validator');
 var bodyParser = require('body-parser')
 var i18n = require('i18n')
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+var indexRouter = require('./src/routes/index');
+var usersRouter = require('./src/routes/users');
 
 var app = express();
+
+var connectionString_mongo = 'mongodb://heroku_ptn142g5:fur6mijdqu54vb26q9e7c08qfg@ds141786.mlab.com:41786/heroku_ptn142g5';
+
+//database connection
+mongoose.Promise = global.Promise;
+mongoose.connect(connectionString_mongo, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('connection succesful to mongoDB'))
+  .catch((err) => console.error(err));
+
+
 
 // view engine setup
 app.engine('.hbs', expressHbs({
@@ -41,7 +51,7 @@ app.use(function (req, res, next) {
 });
 
 // error handler
-app.use(function(err, req, res, next) {
+app.use(function (err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
