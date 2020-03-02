@@ -11,8 +11,8 @@ var flash = require('connect-flash');
 var validator = require('express-validator');
 var bodyParser = require('body-parser')
 var i18n = require('i18n')
-var indexRouter = require('./src/routes/index');
-var usersRouter = require('./src/routes/users');
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
 
 var app = express();
 
