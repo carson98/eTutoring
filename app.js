@@ -13,18 +13,15 @@ var bodyParser = require('body-parser')
 var i18n = require('i18n')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var demoRouter = require('./routes/demo');
+var config = require(__dirname + '/config.json')[process.env.NODE_ENV || "development"];
 
 var app = express();
 
-var connectionString_mongo = 'mongodb://heroku_ptn142g5:fur6mijdqu54vb26q9e7c08qfg@ds141786.mlab.com:41786/heroku_ptn142g5';
-
 //database connection
-mongoose.Promise = global.Promise;
-mongoose.connect(connectionString_mongo, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('connection succesful to mongoDB'))
-  .catch((err) => console.error(err));
-
-
+mongoose.connect(config.dbUrl, { 
+  useNewUrlParser: true, 
+  useUnifiedTopology: true });
 
 // view engine setup
 app.engine('.hbs', expressHbs({
@@ -41,6 +38,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/demo', demoRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
