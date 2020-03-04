@@ -1,10 +1,85 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>{{title}}</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>eTutoring</title>
+
+  <!-- Prevent the demo from appearing in search engines (REMOVE THIS) -->
+  <meta name="robots" content="noindex">
+
+  <!-- Material Design Icons  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <!-- Roboto Web Font -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en"
+    rel="stylesheet">
+
+  <!-- App CSS -->
+  <link type="text/css" href="/stylesheets/css/style.min.css" rel="stylesheet">
+
+  <!-- Vendor CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontawesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/stylesheets/css/morris.min.css">
+  <link rel="stylesheet" href="/stylesheets/css/fullcalendar.min.css">
+  <link rel="stylesheet" href="/stylesheets/css/datatables.min.css">
+
+  <!-- Datepicker -->
+  <link rel="stylesheet" href="/vendor/nouislider.min.css">
+  <link rel="stylesheet" href="/stylesheets/css/nouislider.min.css">
+</head>
+
+<body>
+  <div class="layout-container ls-top-navbar si-l3-md-up">
+    {{>navbar}}
     {{{body}}}
-  </body>
+  </div>
+
+  <!-- jQuery -->
+  <script src="/vendor/jquery.min.js"></script>
+
+  <!-- Bootstrap -->
+  <script src="/vendor/tether.min.js"></script>
+  <script src="/vendor/bootstrap.min.js"></script>
+
+  <!-- AdminPlus -->
+  <script src="/vendor/adminplus.js"></script>
+
+  <!-- App JS -->
+  <script src="/javascripts/main.min.js"></script>
+
+  <!-- Required by Calendar (fullcalendar) -->
+  <script src="/vendor/moment.min.js"></script>
+
+  <!-- Fullcalendar -->
+  <script src="/vendor/fullcalendar.min.js"></script>
+
+  <!-- Init -->
+  <script src="/javascripts/fullcalendar.js"></script>
+  <script src="/javascripts/chart.js"></script>
+  <script src="/javascripts/countdown.js"></script>
+  <script src="/javascripts/slider.js"></script>
+
+  <!-- Theme Colors -->
+  <script src="/javascripts/colors.js"></script>
+
+  <!-- Required by CHART (morrisjs) -->
+  <script src="/vendor/raphael-min.js"></script>
+  <script src="/vendor/morris.min.js"></script>
+
+  <!-- Easy Countdown -->
+  <script src="/vendor/jquery.countdown.min.js"></script>
+
+  <!-- Vendor JS -->
+  <script src="/vendor/jquery.dataTables.min.js"></script>
+  <script src="/vendor/datatables-bootstrap3.min.js"></script>
+  <script src="/vendor/nouislider.min.js"></script>
+
+  <!-- Initialize -->
+  <script src="/javascripts/datatables.js"></script>
+</body>
+
 </html>
