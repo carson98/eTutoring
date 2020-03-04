@@ -1,0 +1,5 @@
+{
+    "development": {
+        "dbUrl": "mongodb://heroku_ptn142g5:fur6mijdqu54vb26q9e7c08qfg@ds141786.mlab.com:41786/heroku_ptn142g5"
+    }
+}
