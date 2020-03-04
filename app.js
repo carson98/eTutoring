@@ -13,20 +13,21 @@ var bodyParser = require('body-parser')
 var i18n = require('i18n')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var demoRouter = require('./routes/demo');
-var config = require(__dirname + '/config.json')[process.env.NODE_ENV || "development"];
+var tutorRouter = require('./routes/tutor');
+var studentRouter = require('./routes/student');
 
 var app = express();
-
-//database connection
-mongoose.connect(config.dbUrl, { 
-  useNewUrlParser: true, 
-  useUnifiedTopology: true });
 
 // view engine setup
 app.engine('.hbs', expressHbs({
   defaultLayout: 'layout',
   extname: '.hbs',
+  helpers: {
+    __: function() { return i18n.__.apply(this, arguments); },
+    __n: function() { return i18n.__n.apply(this, arguments); }
+  },
+  layoutsDir: __dirname + '/views/layouts/',
+  partialsDir: __dirname + '/views/partials/'
 }))
 app.set('view engine', 'hbs');
 
@@ -36,9 +37,42 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
+
+// Change Language
+i18n.configure({
+  locales: ['vn', 'en'],
+  fallbacks: {'en': 'vn'},
+  defaultLocale: 'en',
+  cookie: 'locale',
+  queryParameter: 'lang',
+  directory: __dirname + '/locales',
+  directoryPermissions: '755',
+  autoReload: true,
+  updateFiles: true,
+  api: {
+    '__': '__',  //now req.__ becomes req.__
+    '__n': '__n' //and req.__n can be called as req.__n
+  }
+});
+app.use(i18n.init);
+
+app.get('/vn', function (req, res) {
+  res.cookie('locale', 'vn', { maxAge: 900000, httpOnly: true });
+  res.redirect('back');
+});
+
+app.get('/en', function (req, res) {
+  res.cookie('locale', 'en', { maxAge: 900000, httpOnly: true });
+  res.redirect('back');
+});
+
 app.use('/users', usersRouter);
-app.use('/demo', demoRouter);
+app.use('/tutor', tutorRouter);
+app.use('/student', studentRouter);
+app.use('/', indexRouter);
+
+
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
@@ -49,7 +83,7 @@ app.use(function (req, res, next) {
 });
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use(function(err, req, res, next) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
