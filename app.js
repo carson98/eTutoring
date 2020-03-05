@@ -15,6 +15,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var tutorRouter = require('./routes/tutor');
 var studentRouter = require('./routes/student');
+var adminRouter = require('./routes/admin');
 
 var app = express();
 
@@ -69,6 +70,7 @@ app.get('/en', function (req, res) {
 app.use('/users', usersRouter);
 app.use('/tutor', tutorRouter);
 app.use('/student', studentRouter);
+app.use('/admin', adminRouter);
 app.use('/', indexRouter);
 
 

@@ -23,5 +23,9 @@
 	"Add Event": "Add Event",
 	"Close": "Close",
 	"Courses": "Courses",
-	"Log Out": "Log Out"
+	"Log Out": "Log Out",
+	"Admin": "Admin",
+	"Tutor management": "Tutor management",
+	"Student management": "Student management",
+	"Course management": "Course management"
 }
