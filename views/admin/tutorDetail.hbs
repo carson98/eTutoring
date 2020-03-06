@@ -1,0 +1,164 @@
+{{>sidebarAdmin}}
+<!-- Edit Account -->
+<div class="layout-content" data-scrollable>
+    <div class="container-fluid">
+
+        <ol class="breadcrumb">
+            <li><a href="#">{{__ "Home"}}</a></li>
+            <li class="active">{{__ "Create tutor"}}</li>
+        </ol>
+        <form action="" method="delete">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h5 class="card-title">{{__ "Tutor's info"}}</h5>
+                            </div>
+                            <div class="col-md-3" style="text-align: right">
+                                <a type="button" class="btn btn-primary" href="/admin/tutor-upload/:id">Edit</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-a-2 tab-content">
+                        <div class="form-group row">
+                            <label for="name" class="col-sm-2 form-control-label"
+                                style="white-space: nowrap">{{__ "Full Name"}}</label>
+                            <div class="col-sm-9 col-md-9">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h4 class="form-control">Tat Minh Du</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="email" class="col-sm-2 form-control-label">{{__ "Email"}}</label>
+                            <div class="col-sm-9 col-md-9">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon1">
+                                        <i class="material-icons md-18 text-muted">mail</i>
+                                    </span>
+                                    <h4 class="form-control">contact@mosaicpro.biz</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="address" class="col-sm-2 form-control-label">{{__ "Address"}}</label>
+                            <div class="col-sm-9 col-md-9">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon3">
+                                        <i class="material-icons md-18 text-muted">location_on</i>
+                                    </span>
+                                    <h4 class="form-control">123</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="website" class="col-sm-2 form-control-label">{{__ "Phone"}}</label>
+                            <div class="col-sm-9 col-md-9">
+                                <div class="input-group">
+                                    <span class="input-group-addon" id="basic-addon2">
+                                        <i class="material-icons md-18 text-muted">phone</i>
+                                    </span>
+                                    <h4 class="form-control">090465333434</h4>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="website" class="col-sm-2 form-control-label">{{__ "Position"}}</label>
+                            <div class="col-sm-6 col-md-4">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h4 class="form-control">Tutor</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <label for="website" class="col-sm-2 form-control-label">{{__ "Salary"}}</label>
+                            <div class="col-sm-6 col-md-3">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <h4 class="form-control">120 vnd</h4>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <ul class="nav nav-tabs">
+                        <li class="nav-item ">
+                            <a class="nav-link active" href="#" data-toggle="tab">{{__ "Tutor's image"}}</a>
+                        </li>
+                    </ul>
+                    <div class="p-a-2 tab-content">
+                        <div class="tab-pane active" id="">
+                            <div class="form-group row">
+                                <div class="col-sm-12">
+                                    <img src="https://s.ftcdn.net/v2013/pics/all/curated/RKyaEDwp8J7JKeZWQPuOVWvkUjGQfpCx_cover_580.jpg?r=1a0fc22192d0c808b8bb2b9bcfbf4a45b1793687"
+                                        alt="" style=" width: 100% ; height: 100%" />
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h5 class="card-title">{{__ "Manage Student"}}</h5>
+                            </div>
+                            <div class="col-md-3" style="text-align: right">
+                                <a type="button" class="btn btn-primary" href="#">Add tutor's student</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-a-2 tab-content">
+                        <table id="" class="table table-striped table-hover table-sm">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Username</th>
+                                    <th>Position</th>
+                                    <th>Office</th>
+                                    <th>Start date</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Diệp Hoài Nam</td>
+                                    <td>nam98@gmail.com</td>
+                                    <td>Student</td>
+                                    <td>Etutoring town</td>
+                                    <td>2019/11/28</td>
+                                    <td><a type="button" class="btn btn-danger" href="/admin/delTutorStu/:id">Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <a type="button" class="btn btn-primary" style="width: 100%" href="/admin/tutorList">Back to list</a>
+            </div>
+            <div class="col-md-6">
+                <a type="submit" class="btn btn-danger" style="width: 100%" href="/admin/delTutor/:id">Delete</a>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
