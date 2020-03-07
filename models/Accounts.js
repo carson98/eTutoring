@@ -1,4 +1,9 @@
-const mongoose = require('mongoose');
+var mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
+var Schema = mongoose.Schema,
+    ObjectId = Schema.ObjectId;
+
+
 
 const AccountSchema = new mongoose.Schema({
   username: {
@@ -10,17 +15,13 @@ const AccountSchema = new mongoose.Schema({
     trim: true,
   },
   profile_id: {
-    type: String,
-    trim: true,
+    type: ObjectId,
+    ref: 'Profiles'
   },
   role: {
     type: String,
     trim: true,
   }
 });
-
-AccountSchema.static("checkExisted", function(id) {
-    return this.find()
-})
 
 module.exports = mongoose.model('Accounts', AccountSchema);

@@ -1,4 +1,7 @@
-const mongoose = require('mongoose');
+var mongoose = require('mongoose');
+mongoose.Promise = require('bluebird');
+var Schema = mongoose.Schema,
+    ObjectId = Schema.ObjectId;
 
 const ProfileSchema = new mongoose.Schema({
   name: {
