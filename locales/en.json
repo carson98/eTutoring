@@ -27,5 +27,11 @@
 	"Admin": "Admin",
 	"Tutor management": "Tutor management",
 	"Student management": "Student management",
-	"Course management": "Course management"
+	"Course management": "Course management",
+	"Manage Student": "Manage Student",
+	"Manage Tutor": "Manage Tutor",
+	"Create tutor": "Create tutor",
+	"Upload student info": "Upload student info",
+	"Password": "Password",
+	"Confirm password": "Confirm password"
 }
