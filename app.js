@@ -19,6 +19,17 @@ var adminRouter = require('./routes/admin');
 
 var app = express();
 
+
+const connectionString_MongoDb = require('./config.json').development;
+
+
+//database connection
+mongoose.Promise = global.Promise;
+mongoose
+	.connect(connectionString_MongoDb.dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('Connect to MongoDB successfully'))
+	.catch((err) => console.error(err));
+
 // view engine setup
 app.engine('.hbs', expressHbs({
   defaultLayout: 'layout',
