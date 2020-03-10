@@ -16,19 +16,22 @@ var usersRouter = require('./routes/users');
 var tutorRouter = require('./routes/tutor');
 var studentRouter = require('./routes/student');
 var adminRouter = require('./routes/admin');
+var config = require('./config.json')["development"];
+mongoose.Promise = require('bluebird');
 
 var app = express();
-const connectionString_MongoDb = require('./config.json').development;
 
-
-//database connection
-mongoose.Promise = global.Promise;
-mongoose
-	.connect(connectionString_MongoDb.dbUrl, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('Connect to MongoDB successfully'))
-	.catch((err) => console.error(err));
-
-  
+/// set up mongoose
+mongoose.connect(config.dbUrl, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+  .then(() => {
+    console.log('Database connected');
+  })
+  .catch((error) => {
+    console.log('Error connecting to database');
+  });
 // view engine setup
 app.engine('.hbs', expressHbs({
   defaultLayout: 'layout',

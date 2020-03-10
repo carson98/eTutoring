@@ -3,11 +3,11 @@ const mongoose = require('mongoose');
 const AllocationSchema = new mongoose.Schema({
   student_id: {
     type: String,
-    trim: true,
+    trim: true
   },
   tutor_id: {
     type: String,
-    trim: true,
+    trim: true
   },
 });
 
