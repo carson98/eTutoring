@@ -1,230 +1,107 @@
-{{>sidebarStudent}}
-<!-- Content -->
+ {{>sidebarStudent}}
+
 <div class="layout-content" data-scrollable>
   <div class="container-fluid">
 
-    <ol class="breadcrumb m-b-0">
+    <ol class="breadcrumb">
       <li><a href="#">{{__ "Home"}}</a></li>
-      <li><a href="#">{{__ "Courses"}}</a></li>
-      <li class="active">The MVC architectural pattern</li>
+      <li class="active">{{__ "Courses"}}</li>
     </ol>
-    <h1 class="page-heading h2">The MVC architectural pattern</h1>
-    <div class="row">
-      <div class="col-md-8">
-        <div class="card">
-          <div style="overflow:hidden; height:300px">
-            <iframe class="embed-responsive-item"
-              src="https://player.vimeo.com/video/97243285?title=0&amp;byline=0&amp;portrait=0" frameborder="0"
-              webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" width="100%" height="300"></iframe>
+    <h1 class="page-heading h2"> Courses</h1>
+    <div class="card-columns">
+      <div class="card">
+        <div class="card-header bg-white">
+          <div class="media">
+            <div class="media-left media-middle">
+              <a href="/student/courseDetail">
+                <img
+                  src="https://fiverr-res.cloudinary.com/images/t_main1,q_auto,f_auto/gigs/120792222/original/264501cc6d7008949fcabdeb47fc283ab37cd89d/create-your-aspnet-mvc-site-for-you.jpg"
+                  alt="Card image cap"
+                  width="100" class="img-rounded">
+              </a>
+            </div>
+            <div class="media-body media-middle">
+              <h4 class="card-title">
+                <a href="/student/courseDetail">{{__ "ASP .NET MVC - Web Application"}}</a>
+              </h4>
+              <span class="label label-primary">{{__ "05-2020"}}</span> <span
+                class="label
+                label-default">{{__ "25 days"}}</span>
+            </div>
+            <div class="media-right media-middle">
+              <a href="/student/courseDetail" class="btn btn-white">More detail</a>
+            </div>
           </div>
-          <div class="card-block">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum dicta eius enim inventoreus optio ratione
-            veritatis. Beatae deserunt illum ipsam magniima mollitia officiis quia tempora!
-          </div>
-        </div>
 
-        <!-- Lessons -->
-        <div class="card">
-          <ul class="list-group">
-            <li class="list-group-item">
-              <div class="media">
-                <div class="media-left">
-                  <div class="text-muted">1.</div>
-                </div>
-                <div class="media-body">
-                  <a href="#">Installation</a>
-                </div>
-                <div class="media-right">
-                  <small class="text-muted-light">2:03</small>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item active">
-              <div class="media">
-                <div class="media-left">
-                  <div class="text-muted">2.</div>
-                </div>
-                <div class="media-body">
-                  <a href="#">The MVC architectural pattern</a>
-                </div>
-                <div class="media-right">
-                  <small class="text-muted-light">25:01</small>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="media">
-                <div class="media-left">
-                  <div class="text-muted">3.</div>
-                </div>
-                <div class="media-body">
-                  <a href="#">Database Models</a>
-                </div>
-                <div class="media-right">
-                  <small class="text-muted-light">12:10</small>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="media">
-                <div class="media-left">
-                  <div class="text-muted">4.</div>
-                </div>
-                <div class="media-body">
-                  <a href="#">Database Access</a>
-                </div>
-                <div class="media-right">
-                  <small class="text-muted-light">1:25</small>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="media">
-                <div class="media-left">
-                  <div class="text-muted">5.</div>
-                </div>
-                <div class="media-body">
-                  <a href="#">Eloquent Basics</a>
-                </div>
-                <div class="media-right">
-                  <small class="text-muted-light">22:30</small>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="media">
-                <div class="media-left">
-                  <div class="text-muted">6.</div>
-                </div>
-                <div class="media-body">
-                  <a href="#">Take Quiz</a>
-                </div>
-                <div class="media-right">
-                  <small class="text-muted-light">10:00</small>
-                </div>
-              </div>
-            </li>
-          </ul>
         </div>
       </div>
-      <div class="col-md-4">
-        <div class="card">
-          <div class="card-block">
-            <a href="#" class="btn btn-primary btn-block btn-rounded" data-toggle="modal" data-target="#myModal">
-              <i class="material-icons md-36">get_app</i>
-              <br> Upload Files</a>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-header bg-white">
-            <div class="media">
-              <div class="media-left media-middle">
-                <img src="assets/images/people/110/guy-6.jpg" alt="About Adrian" width="50" class="img-circle">
-              </div>
-              <div class="media-body media-middle">
-                <h4 class="card-title"><a href="#">Adrian Demian</a></h4>
-                <p class="card-subtitle">Instructor</p>
-              </div>
+      <div class="card">
+        <div class="card-header bg-white">
+          <div class="media">
+            <div class="media-left media-middle">
+              <a href="">
+                <img
+                  src="https://miro.medium.com/max/365/1*d2zLEjERsrs1Rzk_95QU9A.png"
+                  alt="Card image cap" width="100" class="img-rounded">
+              </a>
+            </div>
+            <div class="media-body media-middle">
+              <h4 class="card-title"><a href="">{{__ "Develop website with
+                  Express JS"}}</a></h4>
+              <span class="label label-primary">{{__ "04-2020"}}</span> <span
+                class="label
+                label-default">{{__ "25 days"}}</span>
+            </div>
+            <div class="media-right media-middle">
+              <a href="" class="btn btn-white">More detail</a>
             </div>
           </div>
-          <div class="card-block">
-            <p>Having over 12 years exp. Adrian is one of the lead UI designers in the industry Lorem ipsum dolor sit
-              amet, consectetur adipisicing elit. Facere, aut.</p>
-            <a href="" class="btn btn-default">
-              <i class="fa fa-facebook"></i>
-            </a>
-            <a href="" class="btn btn-default">
-              <i class="fa fa-twitter"></i>
-            </a>
-            <a href="" class="btn btn-default"><i class="fa fa-github"></i></a>
-          </div>
         </div>
-
-        <div class="card">
-          <ul class="list-group list-group-fit">
-            <li class="list-group-item">
-              <div class="media">
-                <div class="media-left">
-                  <i class="material-icons text-muted-light">schedule</i>
-                </div>
-                <div class="media-body media-middle">
-                  2
-                  <small class="text-muted">hrs</small> &nbsp; 26
-                  <small class="text-muted">min</small>
-                </div>
-              </div>
-            </li>
-            <li class="list-group-item">
-              <div class="media">
-                <div class="media-left">
-                  <i class="material-icons text-muted-light">assessment</i>
-                </div>
-                <div class="media-body media-middle">
-                  Beginner
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-
-        <div class="card">
-          <div class="card-header">
-            <h4 class="card-title">Ratings</h4>
-          </div>
-          <div class="card-block">
-            <div>
-              <i class="material-icons text-warning md-18">star</i>
-              <i class="material-icons text-warning md-18">star</i>
-              <i class="material-icons text-warning md-18">star</i>
-              <i class="material-icons text-warning md-18">star</i>
-              <i class="material-icons text-warning md-18">star_border</i>
+      </div>
+      <div class="card">
+        <div class="card-header bg-white">
+          <div class="media">
+            <div class="media-left media-middle">
+              <a href="">
+                <img
+                  src="data:image/png;base64,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"alt="Card
+                  image cap" width="100" class="img-rounded">
+              </a>
             </div>
-            <small class="text-muted">20 ratings</small>
+            <div class="media-body media-middle">
+              <h4 class="card-title"><a href="">{{__ "Mobile Application"}}</a></h4>
+              <span class="label label-primary">{{__ "04-2020"}}</span> <span
+                class="label
+                label-default">{{__ "25 days"}}</span>
+            </div>
+            <div class="media-right media-middle">
+              <a href="" class="btn btn-white">More detail</a>
+            </div>
           </div>
         </div>
-
-        <a href="forum.html" class="btn btn-default btn-block btn-rounded">
-          <i class="material-icons">help</i> Get Help
-        </a>
       </div>
     </div>
-  </div>
-</div>
+    <nav class="center">
+      <ul class="pagination pagination-sm">
+        <li class="page-item disabled">
+          <a class="page-link" href="#" aria-label="Previous">
+            <span aria-hidden="true">&laquo;</span>
+            <span class="sr-only">Previous</span>
+          </a>
+        </li>
+        <li class="page-item active">
+          <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+        </li>
+        {{!-- <li class="page-item"><a class="page-link" href="#">2</a></li>
+        --}}
+        <li class="page-item">
+          <a class="page-link" href="#" aria-label="Next">
+            <span aria-hidden="true">&raquo;</span>
+            <span class="sr-only">Next</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-<!--Add Event Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-        <h4 class="modal-title" id="myModalLabel">Upload File</h4>
-      </div>
-      <div class="modal-body">
-        <form action="">
-          <div class="form-group">
-            <label>Time left</label>
-            <div class="countdown" data-value="4" data-unit="hour"></div>
-          </div>
-          <div class="form-group row">
-            <label for="avatar" class="col-sm-3 form-control-label">Upload File:</label>
-            <div class="col-sm-9">
-              <div class="media">
-                <div class="media-body media-middle">
-                  <label class="file">
-                    <input type="file" id="file">
-                    <span class="file-custom"></span>
-                  </label>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-      </form>
-      <div class="modal-footer center">
-        <button type="button" class="btn btn-success btn-rounded-deep">Submit</button>
-      </div>
-    </div>
   </div>
 </div>
